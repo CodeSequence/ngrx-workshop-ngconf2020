@@ -1,0 +1,60 @@
+{
+  "name": "ngrx-workshop-example",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "concurrently \"npm run server\" \"ng serve\"",
+    "server": "json-server db.json --watch",
+    "build": "ng build",
+    "test": "jest",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupJest.ts"
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~9.1.0",
+    "@angular/cdk": "~9.2.0",
+    "@angular/common": "~9.1.0",
+    "@angular/compiler": "~9.1.0",
+    "@angular/core": "~9.1.0",
+    "@angular/forms": "~9.1.0",
+    "@angular/material": "~9.2.0",
+    "@angular/platform-browser": "~9.1.0",
+    "@angular/platform-browser-dynamic": "~9.1.0",
+    "@angular/router": "~9.1.0",
+    "@ngrx/effects": "^9.0.0",
+    "@ngrx/entity": "^9.0.0",
+    "@ngrx/router-store": "^9.0.0",
+    "@ngrx/store": "^9.0.0",
+    "@ngrx/store-devtools": "^9.0.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "uuid": "^3.3.3",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.901.0",
+    "@angular/cli": "~9.1.0",
+    "@angular/compiler-cli": "~9.1.0",
+    "@angular/language-service": "~9.1.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.11.1",
+    "@types/uuid": "^3.4.5",
+    "codelyzer": "^5.1.2",
+    "concurrently": "^4.1.2",
+    "jasmine-marbles": "^0.6.0",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^7.1.1",
+    "json-server": "^0.15.1",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.19.0",
+    "typescript": "~3.8.3"
+  }
+}

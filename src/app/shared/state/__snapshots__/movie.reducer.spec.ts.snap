@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie Reducer should add newly created movies to the state 1`] = `
+Object {
+  "activeMovieId": "1",
+  "entities": Object {
+    "1": Object {
+      "earnings": 100000,
+      "id": "1",
+      "name": "Arrival",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;
+
+exports[`Movie Reducer should apply changes to a movie when a movie is updated 1`] = `
+Object {
+  "activeMovieId": "1",
+  "entities": Object {
+    "1": Object {
+      "earnings": 120000,
+      "id": "1",
+      "name": "Blade Runner",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;
+
+exports[`Movie Reducer should load all movies when the API loads them all successfully 1`] = `
+Object {
+  "activeMovieId": null,
+  "entities": Object {
+    "1": Object {
+      "earnings": 0,
+      "id": "1",
+      "name": "Green Lantern",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;
+
+exports[`Movie Reducer should remove movies from the state when they are deleted 1`] = `
+Object {
+  "activeMovieId": "1",
+  "entities": Object {
+    "1": Object {
+      "earnings": 1000,
+      "id": "1",
+      "name": "mother!",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;
+
+exports[`Movie Reducer should roll back a deletion if deleting a movie fails 1`] = `
+Object {
+  "activeMovieId": "1",
+  "entities": Object {
+    "1": Object {
+      "earnings": 10000,
+      "id": "1",
+      "name": "Black Panther",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;
+
+exports[`Movie Reducer should rollback changes to a movie if there is an error when updating it with the API 1`] = `
+Object {
+  "activeMovieId": "1",
+  "entities": Object {
+    "1": Object {
+      "earnings": 10000000000,
+      "id": "1",
+      "name": "Star Wars: A New Hope",
+    },
+  },
+  "ids": Array [
+    "1",
+  ],
+}
+`;

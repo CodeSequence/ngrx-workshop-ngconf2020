@@ -1,0 +1,13 @@
+<div class="spinner" *ngIf="gettingStatus$ | async; else checkIfAuthenticated">
+  <mat-spinner color="primary" [diameter]="40"></mat-spinner>
+</div>
+<ng-template #checkIfAuthenticated>
+  <router-outlet *ngIf="user$ | async; else loginForm"></router-outlet>
+
+  <ng-template #loginForm>
+    <app-login-form
+      [error]="error$ | async"
+      (login)="onLogin($event)"
+    ></app-login-form>
+  </ng-template>
+</ng-template>

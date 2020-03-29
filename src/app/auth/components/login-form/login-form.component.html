@@ -1,0 +1,26 @@
+<form (submit)="onSubmit()" [formGroup]="formGroup">
+  <h3>Login</h3>
+  <p>The username can be anything and the password must be "password"</p>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Username"
+      type="text"
+      formControlName="username"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Password"
+      type="password"
+      formControlName="password"
+    />
+  </mat-form-field>
+  <div class="formActions">
+    <button mat-raised-button color="accent" type="submit">
+      Login
+    </button>
+  </div>
+  <span class="error" *ngIf="error">{{ error }}</span>
+</form>

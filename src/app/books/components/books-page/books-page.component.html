@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-50">
+    <app-books-total [total]="total"> </app-books-total>
+
+    <app-books-list
+      [books]="books"
+      (select)="onSelect($event)"
+      (delete)="onDelete($event)"
+    >
+    </app-books-list>
+  </div>
+
+  <app-book-detail
+    class="col-50"
+    [book]="currentBook"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  >
+  </app-book-detail>
+</div>

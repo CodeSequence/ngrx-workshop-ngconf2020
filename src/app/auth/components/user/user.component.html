@@ -1,0 +1,12 @@
+<ng-container *ngIf="user$ | async as user">
+  <h4>Welcome</h4>
+  <h3>{{ user.username }}</h3>
+  <button
+    mat-icon-button
+    type="button"
+    (click)="onLogout()"
+    matTooltip="Logout"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</ng-container>

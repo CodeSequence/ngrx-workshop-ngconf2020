@@ -1,0 +1,23 @@
+:host {
+  display: grid;
+  padding: 12px 0 12px 12px;
+  grid-template-areas:
+    "welcome logout"
+    "name logout";
+  grid-template-columns: 1fr 40px;
+}
+
+h4 {
+  grid-area: welcome;
+  margin: 0;
+  font-weight: normal;
+}
+
+h3 {
+  grid-area: name;
+  margin: 0;
+}
+
+button {
+  grid-area: logout;
+}
