@@ -16,7 +16,9 @@ export class UserComponent {
     username: "NgRx Learner"
   });
 
+  constructor(private store: Store<State>) {}
+
   onLogout() {
-    // Not Implemented
+    this.store.dispatch(AuthUserActions.logout());
   }
 }
