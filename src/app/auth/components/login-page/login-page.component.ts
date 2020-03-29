@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { Store } from "@ngrx/store";
+import { State } from "src/app/shared/state";
 import { UserModel } from "src/app/shared/models";
 import { AuthUserActions } from "../../actions";
 import { LoginEvent } from "../login-form";
@@ -18,7 +19,11 @@ export class LoginPageComponent {
   });
   error$: Observable<string | null> = of(null);
 
+  constructor(private store: Store<State>) {}
+
   onLogin($event: LoginEvent) {
-    // Not Implemented
+    this.store.dispatch(
+      AuthUserActions.login($event.username, $event.password)
+    );
   }
 }
