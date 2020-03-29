@@ -33,6 +33,30 @@ export const booksReducer = createReducer(
       ...state,
       activeBookId: action.bookId
     };
+  }),
+  on(BooksApiActions.booksLoaded, (state, action) => {
+    return {
+      ...state,
+      collection: action.books
+    };
+  }),
+  on(BooksApiActions.bookCreated, (state, action) => {
+    return {
+      collection: createBook(state.collection, action.book),
+      activeBookId: null
+    };
+  }),
+  on(BooksApiActions.bookUpdated, (state, action) => {
+    return {
+      collection: updateBook(state.collection, action.book),
+      activeBookId: null
+    };
+  }),
+  on(BooksApiActions.bookDeleted, (state, action) => {
+    return {
+      ...state,
+      collection: deleteBook(state.collection, action.bookId)
+    };
   })
 );
 
