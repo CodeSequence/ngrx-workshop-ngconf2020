@@ -32,6 +32,6 @@ or
 yarn start
 ```
 
-The app should now be running at [http://localhost:3000](http://localhost:3000)
+The app should now be running at [http://localhost:4200](http://localhost:4200)
 
 
