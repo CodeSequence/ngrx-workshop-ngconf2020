@@ -123,7 +123,7 @@ Now that effects are running and are dispatching actions for the API it is time 
 
 ### Challenge: Handling Auth API Actions
 
-**PR: 17-auth-effects**
+**PR: 18-handling-auth-api-actions**
 
 1. Open `auth.reducer.ts` in the State module
 2. Add a state transition function that handles the `getAuthStatusSuccess` action. How should state change when this action is handled?
